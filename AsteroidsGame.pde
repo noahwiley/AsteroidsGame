@@ -1,5 +1,8 @@
 Star[] nightSky = new Star[100];
+ArrayList<Asteroid> blobs = new ArrayList<Asteroid>(25);
 Spaceship bean = new Spaceship();
+// number of asteroids
+int numOfBlobs = 5;
 boolean wPress = false;
 boolean aPress = false;
 boolean dPress = false;
@@ -11,6 +14,10 @@ public void setup()
   {
     nightSky[i] = new Star();
   }
+  for(int i = 0; i< numOfBlobs; i++)
+  {
+    blobs.add(new Asteroid());
+  }
 }
 public void draw() 
 {
@@ -19,10 +26,15 @@ public void draw()
   {
     nightSky[i].show(); 
   }
+  for(int i = 0; i<blobs.size(); i++)
+  {
+    blobs.get(i).move();
+    blobs.get(i).show();
+  }
   // moving
   if(wPress)
   {
-    bean.accelerate(0.3);
+    bean.accelerate(0.1);
   }
   if(aPress)
   {
@@ -82,25 +94,3 @@ public void keyReleased()
     sPress = false;
   }
 }
-
-/*
-public void keyReleased()
-{
-  if(key == 'w')
-  {
-    bean.accelerate(1);
-  }
-  if(key == 'a')
-  {
-    bean.turn(-10);
-  }
-  if(key == 'd')
-  {
-    bean.turn(10);
-  }
-  if(key == 's')
-  {
-    bean.hyperspace();
-  }
-}
-*/
