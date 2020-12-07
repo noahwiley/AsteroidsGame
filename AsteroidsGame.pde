@@ -1,5 +1,5 @@
 Star[] nightSky = new Star[100];
-ArrayList<Asteroid> blobs = new ArrayList<Asteroid>(25);
+ArrayList<Asteroid> blobs = new ArrayList<Asteroid>();
 Spaceship bean = new Spaceship();
 // number of asteroids
 int numOfBlobs = 5;
