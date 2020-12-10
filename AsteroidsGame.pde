@@ -8,7 +8,7 @@ ArrayList<Asteroid> blobs = new ArrayList<Asteroid>();
 Spaceship bean = new Spaceship();
 
 // number of asteroids
-int numOfBlobs = 70;
+int numOfBlobs = 15;
 
 //Bullets
 ArrayList<Bullet> pewpews = new ArrayList<Bullet>();
