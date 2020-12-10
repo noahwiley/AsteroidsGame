@@ -24,6 +24,38 @@ class Asteroid extends Floater
     fill(0);
     super.show();
   }
-  public double getX(){return myCenterX;}
-  public double getY(){return myCenterY;}
+  //accessors
+    public double getX() 
+    {
+      return myCenterX;
+    }
+    public double getY() 
+    {
+      return myCenterY;
+    }
+    public double getPointDirection() 
+    {
+      return myPointDirection;
+    }
+    public double getXspeed()
+    {
+      return myXspeed;
+    }
+    public double getYspeed()
+    {
+      return myYspeed;
+    }
+    //setters
+    public void setPointDirection(int degrees) 
+    {
+      myPointDirection = degrees;
+    }
+    public void setY(double y) 
+    {
+    myCenterY = y;
+    }
+    public void setX(double x)
+   {
+     myCenterX = x;
+   }
 }
