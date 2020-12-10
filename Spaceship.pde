@@ -1,7 +1,7 @@
 
   
   class Spaceship extends Floater  
-{   
+{     
     public Spaceship()
    {
     corners = 4;  //the number of corners, a triangular floater has 3   
@@ -20,5 +20,40 @@
      myCenterX = (int)(Math.random()*500);
      myCenterY = (int)(Math.random()*500);
      myPointDirection = (Math.random()*360);
+   }
+   
+   //accessors
+    public double getX() 
+    {
+      return myCenterX;
+    }
+    public double getY() 
+    {
+      return myCenterY;
+    }
+    public double getPointDirection() 
+    {
+      return myPointDirection;
+    }
+    public double getXspeed()
+    {
+      return myXspeed;
+    }
+    public double getYspeed()
+    {
+      return myYspeed;
+    }
+    //setters
+    public void setPointDirection(int degrees) 
+    {
+      myPointDirection = degrees;
+    }
+    public void setY(double y) 
+    {
+    myCenterY = y;
+    }
+    public void setX(double x)
+   {
+     myCenterX = x;
    }
 }
