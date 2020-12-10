@@ -8,7 +8,7 @@ ArrayList<Asteroid> blobs = new ArrayList<Asteroid>();
 Spaceship bean = new Spaceship();
 
 // number of asteroids
-int numOfBlobs = 15;
+int numOfBlobs = 70;
 
 //Bullets
 ArrayList<Bullet> pewpews = new ArrayList<Bullet>();
@@ -94,7 +94,11 @@ public void draw()
   
   
   bean.move();
-  bean.show();
+  //pause display of ship when in hyperspace
+  if(sPress != true)
+  {
+    bean.show();
+  }
 }
 
 
